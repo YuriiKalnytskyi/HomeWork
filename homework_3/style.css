@@ -1,0 +1,115 @@
+body{}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task1{
+    margin: 0 auto;
+    width: 900px;
+    height: 700px;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+.task1-a{
+    margin: 5px auto;
+    width: 99%;
+    height: 200px;
+    background: silver;
+    border-radius: 10px;
+}
+.task1-b{
+    width: 70%;
+    height: 480px;
+    background: silver;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.task1-c{
+    width:28%;
+    height: 480px;
+    background: silver;
+    border-radius: 10px;
+}
+/*---------------------*/
+.task2{
+    margin: 30px auto;
+    width: 900px;
+    height: 700px;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+.task2-a{
+    margin: 0 auto;
+    margin-top: 7px;
+    width: 98%;
+    height: 33.33333%;
+    background: silver;
+    border-radius: 10px;
+}
+.task2box{
+    width: 70%;
+    height: 63%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 4.5px ;
+}
+.task2-b{
+    width: 100%;
+    height: 50%;
+    background: silver;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.task2-c,.task2-d,.task2-e{
+    width: 32.33333%;
+    height: 48%;
+    background: silver;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.task2-f {
+    width: 28%;
+    height: 63%;
+    background: silver;
+    border-radius: 10px;
+}
+/*-------------------------------*/
+.task3{
+    margin: 30px auto;
+    width: 900px;
+    height: 700px;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+.task3-a{
+    margin: 0 auto;
+    margin-top: 7px;
+    width: 98%;
+    height: 33.33333%;
+    background: silver;
+    border-radius: 10px;
+}
+.task3box{
+    width: 70%;
+    height: 63%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 4.5px ;
+}
+.task3-b,.task3-c,.task3-d,.task3-e,.task3-f,.task3-g{
+    width: 32.33333%;
+    height: 48%;
+    background: silver;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.task3-h {
+    width: 28%;
+    height: 63%;
+    background: silver;
+    border-radius: 10px;
+}
