@@ -60,7 +60,7 @@
 
 // <---------- Task 12 -------------- >
 
-//let arr = ['code', 'home', 'qwerty', 'world', ' whe ', 'false' ,'212', 'who', 'dcdc' , 'true']
+//let arr = ['code', 'home', 'qwerty', 'world', ' whe ', 'false' ,'212', 'who', 'git' , 'true']
 // for (let i = 0 ; i < arr.length; i++){
 //     console.log(arr[i]);
 //}
@@ -292,13 +292,16 @@
 // }
 // console.log(arr1);
 //<----------  50 ------------------ > ??????????????????????????
-//
-// let arr = [2,5,6,1,5,1,5,7,2,9];
-// let arr1 = [];
-// for (let i = 0 ; i < arr.length ; i++){
-//     arr1= [arr1 + arr[i]];
+
+// let arr = [2, 5, 6, 1, 5, 1, 5, 7, 2, 9];
+// let arr2 = [];
+// // for ( arr2 of arr) {
+// //     console.log(arr2);
+// // }
+// for (let i = 0; i < arr.length; i++) {
+//     arr2[i] = arr[i];
 // }
-// console.log(arr1);
+// console.log(arr2);
 
 // //<----------  56 ------------------ >
 
@@ -352,7 +355,6 @@
 //         console.log(arr[i]);
 //     }
 // }
-
 //<----------  62 ------------------ >
 // let arr = [2,17,13,6,22,31,45,66,100,-18] ;
 // console.log(arr);
@@ -383,7 +385,6 @@
 //     console.log(arr[i]);
 // }
 
-
 // let arr = [2,17,13,6,22,31,45,66,100,-18] ;
 // let i=arr.length;
 // while (i >=0){
@@ -392,7 +393,6 @@
 //         console.log(arr[i]);
 //     }
 // }
-
 
 // let arr = [2,17,13,6,22,31,45,66,100,-18] ;
 // for (let i = arr.length-1; i >=0  ; i--){
@@ -426,6 +426,7 @@
 //         console.log(arr[i])
 //     }
 // }
+
 // //<----------  68 ------------------ >
 
 // let arr=[];
@@ -435,3 +436,110 @@
 //         console.log(arr[i])
 //     }
 // }
+
+// //<----------  73 ------------------ >
+
+// let arr=[];
+// for (let i = 0 ; i<100; i++){
+//     arr.push(i)
+//     if(arr[i] %2 === 0){
+//         console.log(arr[i])
+//     }
+// }
+
+// //<----------  74 ------------------ >
+
+// let arr=[];
+// for (let i = 0 ; i<100; i++){
+//     arr.push(i)
+//     if(arr[i] %2 !== 0){
+//         console.log(arr[i])
+//     }
+// }
+
+// //<----------  75 ------------------ >
+//
+// let arr = [];
+// for (let i = 0 ; i<10 ; i++){
+//     arr[i]=Math.random();
+// }
+// console.log(arr);
+// let arr = [];
+// for (let i = 0 ; i<10 ; i++){
+//     arr[i]=Math.floor((Math.random()*732-8)+8)
+// }
+// console.log(arr);
+// //<----------  77 ------------------ >
+// let arr = [];
+// for (let i = 0 ; i<10 ; i++){
+//     arr[i]=Math.floor((Math.random()*732-8)+8)
+// }
+// console.log(arr);
+//вывести на консоль  каждый третий елемент
+// for (let i= 0 ; i<arr.length; i+=3){
+//     console.log(arr[i]);
+// }
+//вывести на консоль  каждый третий елемент но при условии что его значение является парным.
+
+// for (let i= 0 ; i<arr.length; i+=3){
+//     if(arr[i]%2===0){
+//         console.log(arr[i]);
+//     }
+// }
+//вывести на консоль  каждый третий елемент но при условии что он имеет парное значение и записать их в другой массив.
+// let arr1=[];
+// for (let i= 0 ; i<arr.length; i+=3){
+//     if(arr[i]%2===0){
+//         console.log(arr[i]);
+//         arr1.push(arr[i]);
+//     }
+// }
+// console.log(arr1);
+
+// //<----------  85 ------------------ >
+// let arr = [];
+// for (let i = 0 ; i<10 ; i++){
+//     arr[i]=Math.floor((Math.random()*732-8)+8)
+// }
+// console.log(arr);
+// let newArr=[];
+// for (let i =0 ; i< arr.length; i++){
+//     if (arr[i+1]%2===0 ){
+//         newArr.push(arr[i])
+//     }
+// }
+// console.log(newArr);
+
+// //<----------  85 ------------------ >
+
+// let arr = [100,250,50,168,120,345,188];
+// let sum = 0
+// console.log(arr);
+// for (let i= 0 ; i<arr.length; i++){
+//     sum +=arr[i]/arr.length
+// }
+// console.log(sum);
+// //<----------  86 ------------------ >
+// let arr = [];
+// for (let i = 0 ; i<10 ; i++){
+//     arr[i]=Math.floor((Math.random()*732-8)+8)
+// }
+// console.log(arr);
+// let newArr = [];
+// for (let i =0 ; i<arr.length ;i++){
+//     newArr[i] = arr[i]*5 ;
+// }
+// console.log(newArr);
+
+// // //<----------  87 ------------------ >
+let arr = [1, 'home', true, 'w', 5, false , 1212, 'who', 4554 , true];
+let newArr = []
+console.log(arr);
+for ( let i = 0 ; i < arr.length ; i++) {
+    if (typeof arr[i] === 'number') {
+        newArr.push(arr[i])
+    }
+}
+console.log(newArr);
+
+
