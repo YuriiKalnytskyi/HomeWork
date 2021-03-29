@@ -292,12 +292,11 @@
 // }
 // console.log(arr1);
 //<----------  50 ------------------ > ??????????????????????????
-
 // let arr = [2, 5, 6, 1, 5, 1, 5, 7, 2, 9];
 // let arr2 = [];
-// // for ( arr2 of arr) {
-// //     console.log(arr2);
-// // }
+// for ( arr2 of arr) {
+//     console.log(arr2);
+// }
 // for (let i = 0; i < arr.length; i++) {
 //     arr2[i] = arr[i];
 // }
@@ -402,12 +401,12 @@
 // }
 
 // let arr = [2,17,13,6,22,31,45,66,100,-18] ;
-// let i=arr.length;
+// let i=arr.length-1;
 // while (i >=0){
-//     i--
-//     if (i%2 !== 0){
+//     if (arr[i]%2 !== 0){
 //         console.log(arr[i]);
 //     }
+//     i--
 // }
 
 // let arr = [2,17,13,6,22,31,45,66,100,-18] ;
@@ -532,14 +531,14 @@
 // console.log(newArr);
 
 // // //<----------  87 ------------------ >
-let arr = [1, 'home', true, 'w', 5, false , 1212, 'who', 4554 , true];
-let newArr = []
-console.log(arr);
-for ( let i = 0 ; i < arr.length ; i++) {
-    if (typeof arr[i] === 'number') {
-        newArr.push(arr[i])
-    }
-}
-console.log(newArr);
+// let arr = [1, 'home', true, 'w', 5, false , 1212, 'who', 4554 , true];
+// let newArr = []
+// console.log(arr);
+// for ( let i = 0 ; i < arr.length ; i++) {
+//     if (typeof arr[i] === 'number') {
+//         newArr.push(arr[i])
+//     }
+// }
+// console.log(newArr);
 
 
