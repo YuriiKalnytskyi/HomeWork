@@ -325,6 +325,7 @@ Example:*/
 //     {id: 4, name: 'olya', age: 28, status:   false}
 // ];
 //
+
 // let citiesWithId = [
 //     {user_id: 3, country: 'USA', city: 'Portland'},
 //     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
