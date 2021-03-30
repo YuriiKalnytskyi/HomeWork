@@ -410,7 +410,7 @@
 // let a = prompt(' a');
 // let b = prompt(' b');
 // let c = prompt(' c');
-// if ( a < b && a < c && b < c  ){
+// if ( a < b && a < c && b < c   ){
 //     console.log( a + ' ' +b+ ' ' +c)
 // }
 // else if ( a < b && a < c < b ){
@@ -444,26 +444,26 @@
 // }
 
 // <!--------------------3----------------------------->
-let a = prompt(' який колір  світлофора ')
-let isRoadClear = confirm('Машини є ?' )
-if (a === 'зелений' && isRoadClear === true ){
-    console.log('подожди пока нарушители проедут ')
-}
-else if (a === 'зелений' && isRoadClear === false ){
-    console.log('Йди !')
-}
-else if (a === 'жовтий' && isRoadClear === true ){
-    console.log('Жди  ')
-}
-else if (a === 'жовтий' && isRoadClear === false ) {
-    console.log('Все рано жди ')
-}
-else if (a === 'червоний' && isRoadClear === true ){
-    console.log('Стой и жди ')
-}
-else if (a === 'червоний' && isRoadClear === false ) {
-    console.log('Стой и жди ')
-}
-else {
-    console.log('Делай что хочешь  !')
-}
+// let a = prompt(' який колір  світлофора ')
+// let isRoadClear = confirm('Машини є ?' )
+// if (a === 'зелений' && isRoadClear === true ){
+//     console.log('подожди пока нарушители проедут ')
+// }
+// else if (a === 'зелений' && isRoadClear === false ){
+//     console.log('Йди !')
+// }
+// else if (a === 'жовтий' && isRoadClear === true ){
+//     console.log('Жди  ')
+// }
+// else if (a === 'жовтий' && isRoadClear === false ) {
+//     console.log('Все рано жди ')
+// }
+// else if (a === 'червоний' && isRoadClear === true ){
+//     console.log('Стой и жди ')
+// }
+// else if (a === 'червоний' && isRoadClear === false ) {
+//     console.log('Стой и жди ')
+// }
+// else {
+//     console.log('Делай что хочешь  !')
+// }
