@@ -259,28 +259,27 @@
 // console.log(newArr);
 
 /*Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд ?????????????????????????????????*/
+/*  ГАВНО КОД ЯКИЙ  ЯКИЙ МРАЦЮЄ АЛЕ НЕ ТАК ЯК ТРЕБА */
+
 // let n1 = '    Harry       Potter      '
 // let n2 = '    Ron       Whisley      '
 // let n3 = '    Hermione       Granger      '
-// let n1_1 = n1.trim()
-// console.log(n1_1);
-// let n11 = n1_1.split(' ');
-// console.log(n11);
-// let arr = [];
-// for (let i = 0; i < n11.length; i++) {
-//     if (n11[i] !== '') {
-//         arr.push(n11[i])
-//
+// function neme (nemes){
+//     let trim = nemes.trim() ;
+//     let split = trim.split(' ')
+//     let arr =[];
+//     for (let i = 0; i < split.length; i++) {
+//         if (split[i] !== '') {
+//             arr.push(split[i])
+//         }
 //     }
+//     for (let i=0;i<arr.length;i++){
+//         console.log(arr[0].concat(' ', arr[i]));       /*'Harry Harry '*/    /* ТО ВИВІД В КОНСОЛІ*/
+//     }                                                  /*'Harry Potter'*/
 // }
-// const concatFunction=(array)=>{
-// for (let i=0;i<array.length;i++){
-//
-//     console.log(array[0].concat(' ', array[i]));
-// }
-// }
-//
-// concatFunction(arr)
+// neme (n1);
+// neme (n2);
+// neme (n3);
 
 /*Додає в боді блок з текстом "Hello owu"*/
 
@@ -306,14 +305,36 @@
 /*приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали. Всі властивості авто в обному блоці*/
 
-let arr = ['BMV', 'Lanos','Tesla','Audi'];
-function car (cars){
-    for (let argument of cars) {
-        let newArr = arr.push(argument)
-        console.log(newArr)
-    }
-}
-car('lada','WV')
+// let arr = ['BMV', 'Lanos','Tesla','Audi'];
+// function car (arr){
+//     for (let argument of arr) {
+//         let tx1 = document.createElement('div')
+//         tx1.innerText = argument;
+//         document.body.appendChild(tx1);
+//
+//     }
+// }
+// car(arr);
 
+
+/* приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
+Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
+Для кожної властивості створити всередені блока автомоблія свій блок */
+
+// function car (cars , id){
+//     for (let i = 0; i < cars.length; i++) {
+//         let div = document.createElement('div')
+//         document.body.appendChild(div);
+//         div.id = id ;
+//         for (let car1 in cars[i]) {
+//             let diV = document.createElement('div')
+//             div.appendChild(diV)
+//             diV.innerText = `${car1} ${cars[i][car1]} `;
+//         }
+//     }
+//     return cars ;
+// }
+
+// car([{car:'BMV', age:1998,color:'red'},{car:'Lanos', age:2000,color:'green'},{car:'Tesla', age:2015,color:'blue'}], 1 );
 
 
