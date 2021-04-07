@@ -136,33 +136,35 @@
 //     this.year = year ;
 //     this.maxSpeed =maxSpeed ;
 //     this.volume =volume ;
-// }
-// function  drive ( car ,Speed){
-//     console.log(`їдемо зі швидкістю ${Speed}  на годину`);
-// }
-// function info (car ){
-//     console.log(car.model ,car.producer , car.year,car.maxSpeed,car.volume);
-// }
-// function increaseMaxSpeed (car,newSpeed) {
-//     car.maxSpeed += newSpeed ;
-//     console.log(`їдемо зі швидкістю ${car.maxSpeed}  на годину`);
 //
+//     this.drive =function  (object){
+//     console.log(`їдемо зі швидкістю ${object.maxSpeed} на годину`)
+//     }
+//
+//     this.info = function  (car ){
+//         console.log(car.model ,car.producer , car.year,car.maxSpeed,car.volume);
+//     }
+//     this.increaseMaxSpeed = function (car,newSpeed) {
+//         car.maxSpeed += newSpeed ;
+//         console.log(`їдемо зі швидкістю ${car.maxSpeed}  на годину`);
+//     }
+//     this.changeYear = function  (car,newValue) {
+//         car.year = newValue ;
+//     }
+//     this.addDriver = function  ( car,driver) {
+//         car.driver = driver;
+//         console.log(`${car.driver}`)
+//     }
 // }
-// function changeYear (car,newValue) {
-//     car.year = newValue ;
-// }
-// function addDriver ( car,driver) {
-//     car.driver = driver;
-//    console.log(`${car.driver}`)
-// }
+//
 // let car = new Car('Z4','BMV',2005, 220, 2.2);
-// drive(car, 160);
-// info(car);
-// increaseMaxSpeed(car ,200);
-// info(car);
-// changeYear(car, 2015);
-// info(car);
-// addDriver(car,'Yura');
+// car.drive(car, 160);
+// car.info(car);
+// car.increaseMaxSpeed(car ,200);
+// car.info(car);
+// car.changeYear(car, 2015);
+// car.info(car);
+// car.addDriver(car,'Yura');
 
 // class Car {
 //     constructor(model, producer, year, maxSpeed, volume) {
@@ -173,15 +175,10 @@
 //         this.volume = volume;
 //     }
 //
-//     drive() {
-//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
-//     }
-//
 //     info() {
-//         // console.log(Car.model, Car.producer, Car.year, Car.maxSpeed, Car.volume);
 //         console.log(this.model, this.producer, this.year, this.maxSpeed, this.volume);
 //     }
-//     increaseMaxSpeed(Car, newSpeed) {
+//     increaseMaxSpeed(car, newSpeed) {
 //         this.maxSpeed += newSpeed;
 //         console.log(`їдемо зі швидкістю ${this.maxSpeed}  на годину`);
 //     }
@@ -191,19 +188,19 @@
 //     }
 //
 //     addDriver( driver) {
-//         Car.drive = driver
-//         console.log(`${Car.drive}`)
+//         this.drive = driver
+//         console.log(`${this.drive}`)
 //
 //     }
 // }
 //
 // let car = new Car('Z4', 'BMV', 2005, 220, 2.2);
-// car.drive(Car);
-// car.info(Car);
-// car.increaseMaxSpeed(Car, 100);
-// car.info(Car);
+// car.drive(car);
+// car.info(car);
+// car.increaseMaxSpeed(car, 100);
+// car.info(car);
 // car.changeYear(2020);
-// car.info(Car);
+// car.info(car);
 // car.addDriver( 'Yura');
 
 
@@ -310,3 +307,157 @@
 //
 // let prince = new Prince ('ivan', 22 ,38 );
 // prince.search(newArr);
+
+/*========================================   Нове завдання    ==========================================================*/
+
+/*Реалізовуємо свій компютерний магазин.
+===
+Необхідно реалізувати базовий клас комютера. Який має лише параметри:
+Оперативна память.
+Потужність процесора. (цифра від 0 до 1000)
+Назва.
+В кожного компютера має бути метод включання.
+Від базового компютрера треба реалізувати ноутбук.
+Він має нову властивість дюймаж монітора.
+
+У нього зявляється нова змінна роботи батареї. Ця змінна визначається як потужність / (дюйми * оперативку)
+===
+Від ноутбука потрібно зробити ультрабук.
+Він має нову змінну ваги.
+При включенні ультрабуку має видаватися помилка, якшо вага більша за 2кг та батарея тримаж менше ніж 4 години.
+===
+Від базвого класу потрібно створити базовий ПК.
+В нього має бути новий метод запуску ігор.
+Кількість FPS визначається як потужність / опервтивку.
+Example: `You are playing *GAME_NAME* with *FPS_COUNT* FSP`
+
+Компютер можна апгрейдити.
+Потужність процесора можна збільшувати максимум на 10%. Зменшувати її не можна.
+Оперативку можна збільшити лише в 2 рази. Зменшувати її не можна.
+Для зміни характеритик мають бути свої методи. Мняти змінну "в лоб" заборонено.
+===
+Від базового ПК необхідно зробити ігнорий ПК.
+Кількість ФПС має бути рівно в 2 рази більший ніж в звичайного ПК.
+При запуску однієї гри потужніть процесора має падати на 0.1%.
+Якшо потужність процесора менша ніж 500. І оперативка менша за 8 потрібно ивдати помилку,
+що на цьому відрі ігри не запускаються.
+*/
+
+// class Computer {
+//     constructor(name , ram ,powerProcessor  ) {
+//         this.name=name ;
+//         this.ram=ram;
+//         this.powerProcessor=powerProcessor ;
+//     }
+//     on(){
+//         let a = confirm('Влючений компютер ???')
+//         if(a){
+//             console.log('Компютер включений ' );
+//         }
+//         else if (!a){
+//             console.log('Компютер виключений ')
+//         }
+//     }
+// }
+// class Laptop extends Computer {
+//     constructor(name , ram ,powerProcessor,inches) {
+//         super( name ,ram,powerProcessor);
+//         this.inches = inches ;
+//     }
+//     batteryOperation(){
+//         console.log(`Робота батареї ${this.powerProcessor /(this.inches * this.ram)} `);
+//     }
+// }
+// let hp = new Laptop('hp',8 ,500,14);
+// hp.on();
+// console.log(hp);
+// hp.batteryOperation ();
+//
+// class Ultrabook extends Laptop {
+//     constructor(name , ram ,powerProcessor,inches ,mass) {
+//         super(name , ram ,powerProcessor,inches,);
+//         this.mass=mass;
+//     }
+//    error(){
+//        let a = confirm(`Влючений компютер  ${this.name}  ???`)
+//        if(a){
+//            console.log('Компютер включений ' );
+//            if (this.mass > 2 ){
+//                console.log(`eroor: вага більша за 2кг і батарея тримає менше ніж 4 години`)
+//            }
+//            if (this.mass <= 2 ){
+//                console.log(`вага менша за 2кг і батарея тримає більше  ніж 4 години`)
+//            }
+//        }
+//        else if (!a){
+//            console.log('Компютер виключений ')
+//        }
+//
+//    }
+// }
+// let asus = new Ultrabook('asus', 8 ,500,10,3);
+// console.log(asus);
+// asus.error()
+//
+// class PC extends Computer{
+//     constructor(name , ram ,powerProcessor ) {
+//         super(name , ram ,powerProcessor);
+//         this.fps=this.powerProcessor/this.ram
+//     }
+//
+//     geme(nemeGeme){
+//         console.log(`You are playing ${nemeGeme} with ${this.fps} FSP`)
+//     }
+//     upPowerProcessor(vidsotok){
+//         if (vidsotok<=10){
+//             let a = (vidsotok *100) /this.powerProcessor ;
+//             this.powerProcessor +=  a ;
+//             console.log(`Потужність збільштлась до : ${this.powerProcessor}`)
+//         }
+//         else if (vidsotok>10){
+//             console.log(`Потужність не змінилась ${this.powerProcessor}`);
+//
+//         }
+//     }
+//     upRam(raz){
+//         if(raz===2){
+//             this.ram = this.ram * raz
+//             console.log(`Оперативка збільштлась до : ${this.ram}`)
+//         }
+//         else if (raz){
+//             console.log(`Оперативка не змінилась ${this.ram}`);
+//
+//         }
+//     }
+// }
+// let pc = new PC('asus',8,500);
+// pc.geme('CsGo');
+// pc.upPowerProcessor(12)
+// pc.upRam(3)
+//
+// class PcGame extends PC{
+//     constructor(name , ram ,powerProcessor ) {
+//         super(name , ram ,powerProcessor);
+//         this.fps *= 2;
+//     }
+//     on() {
+//         super.on();
+//
+//     }
+//     startGame(){
+//         this.powerProcessor -=  0.001*this.powerProcessor
+//         // console.log(this.powerProcessor)
+//     }
+//     audit(game){
+//         if(this.powerProcessor>500 && this.ram > 8){
+//             console.log(`${game}: гра запускається `)
+//         }
+//         else {
+//             console.log(`error: на цьому відрі ігри не запускаються `)
+//         }
+//     }
+// }
+// let pcGem = new PcGame('hp',8 ,500);
+// pcGem.on()
+// pcGem.startGame()
+// pcGem.audit('CsGo');
