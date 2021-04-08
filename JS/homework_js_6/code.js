@@ -398,40 +398,21 @@ let car = [
     {Vlasnyk: {name: 'masha', age: 30, drivingeEperience: 3}, model: "mercedes", power: 230, price: 4457, year: 2012},
     {Vlasnyk: {name: 'slavik', age: 30, drivingeEperience: 8}, model: "tesla", power: 400, price: 20000, year: 2019}
 ];
-/*Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).*/
+/*Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).
+На відремонтовані автомобілі найняти нових водіїв (переприсвоїти змінну водій).*/
 
-// цей код не працює
-
-let cars = car.map((car,index , k) => {
-    if(index<=k.length /2 ){
+let cars = car.map((car,index ,) => {
+    if(index%2===0 ){
         car.remont = true ;
         car.power += 0.1 * car.power ;
-        return car
     }
-
-    else {
+      else {
         car.remont = false ;
-        return car
-    }
-});
-console.log(cars);
-
-let car11 = cars.map((car)=>{
-    if (car.remont !== true){
         car.Vlasnyk.name = ' new Vlasnyk';
     }
-    return car ;
+    return car
 });
-console.log(car11);
-
-
-// let cars = car.reduce((acc, currentValue, currentIndex) => {
-//     if (currentValue.length / 2){
-//
-//     }
-// });
-
-
+console.log(cars);
 
 // /*Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%*/
 // let cars1  = car.forEach((value,index)=>{
