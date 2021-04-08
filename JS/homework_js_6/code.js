@@ -408,6 +408,7 @@ let cars = car.map((car,index , k) => {
         car.power += 0.1 * car.power ;
         return car
     }
+
     else {
         car.remont = false ;
         return car
