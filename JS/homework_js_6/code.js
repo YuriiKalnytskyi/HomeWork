@@ -402,27 +402,26 @@ let car = [
 
 // цей код не працює
 
-// let cars = car.forEach((car,index , k) => {
-//     if(index<=k.length /2 ){
-//         car.remont = true ;
-//         car.power += 0.1 * car.power ;
-//         return car
-//     }
-//     else {
-//         car.remont = false ;
-//         return car
-//     }
-//     // return car
-// });
-// console.log(cars);
-// //
-// // let car11 = car.forEach((car)=>{
-// //     if (car.r=== true){
-// //         car.Vlasnyk.name = ' new Vlasnyk';
-// //     }
-// //     return car ;
-// // });
-// // console.log(car11);
+let cars = car.map((car,index , k) => {
+    if(index<=k.length /2 ){
+        car.remont = true ;
+        car.power += 0.1 * car.power ;
+        return car
+    }
+    else {
+        car.remont = false ;
+        return car
+    }
+});
+console.log(cars);
+
+let car11 = cars.map((car)=>{
+    if (car.remont !== true){
+        car.Vlasnyk.name = ' new Vlasnyk';
+    }
+    return car ;
+});
+console.log(car11);
 
 
 // let cars = car.reduce((acc, currentValue, currentIndex) => {
