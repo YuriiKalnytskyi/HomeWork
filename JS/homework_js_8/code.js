@@ -73,7 +73,69 @@
 --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые
 инпуты для редактирования, которые уже заполнены данными объекта*/
 
-let submit = document.getElementById('submit');
+// let submit = document.getElementById('submit');
+//
+// let name = document.getElementById('name');
+// let name1 = document.getElementById('name1');
+// let surname = document.getElementById('surname');
+// let mail = document.getElementById('mail');
+// let firm = document.getElementById('firm');
+// let department = document.getElementById('department');
+// let birthday = document.getElementById('birthday');
+// let arr = [];
+//
+// submit.onclick = (ev) => {
+//     ev.preventDefault()
+//     let user = {
+//         name: name.value,
+//         name1: name1.value,
+//         surname: surname.value,
+//         mail: mail.value,
+//         firm: firm.value,
+//         department: department.value,
+//         birthday: birthday.value,
+//     }
+//     arr.push(user)
+//     localStorage.setItem('users', JSON.stringify(arr));
+//
+//     const users = JSON.parse(localStorage.getItem('users'))
+//
+//     let div = document.createElement('div')
+//     document.body.append(div);
+//     let btn = document.createElement('button')
+//     let div2 = document.createElement('div')
+//     btn.innerHTML = 'Видалити юзера '
+//     users.map((value, index) => {
+//         value.index = index
+//         div.appendChild(div2);
+//         div2.innerText = JSON.stringify(value)
+//         div2.appendChild(btn)
+//         div2.setAttribute('id', index)
+//     })
+//
+//     btn.onclick = () => {
+//         div2.innerHTML= '';
+//         const arr = JSON.parse(localStorage.getItem('users'));
+//         arr.splice(index, 1)
+//         localStorage.setItem('users', JSON.stringify(arr))
+//
+//         // localStorage.removeItem('users',) // це видаляє повністю весь масив юзерів
+//
+//         /* наступним кодом я пробував видалитит конкретного юзера аел не получається і
+//         * І незнаю як зробити */
+//         // console.log(e);
+//         // const index = e.path[1].getAttribute('id')
+//         // console.log(users);
+//         // const newUser = users.find((value, index1) => index1 !== index);
+//         // console.log(newUser);
+//     }
+// }
+//
+// let usersData = JSON.parse(localStorage.getItem('users'));
+// console.log(usersData);
+
+
+// const user = document.getElementById('user');
 
 let name = document.getElementById('name');
 let name1 = document.getElementById('name1');
@@ -83,9 +145,44 @@ let firm = document.getElementById('firm');
 let department = document.getElementById('department');
 let birthday = document.getElementById('birthday');
 let arr = [];
+let seve = document.getElementById('save');
 
-submit.onclick = (ev) => {
-    ev.preventDefault()
+const form = document.forms.user
+const userS = document.getElementById('users');
+
+const log = () => {
+    userS.innerText = null
+    let users = JSON.parse(localStorage.getItem('users'))||[];
+
+    users.forEach((value, index) => {
+        let div = document.createElement('div');
+        let div2 = document.createElement('div');
+        div2.innerText = JSON.stringify(value);
+        div.appendChild(div2);
+
+        // let btn = document.createElement('button');
+        // btn.innerHTML = 'редагувати ';
+        // div2.appendChild(btn);
+        // btn.onclick = function ()  {
+        //     let arr = JSON.parse(localStorage.getItem('users'));
+        //     arr.splice(index, 1);
+        //     localStorage.setItem('users',JSON.stringify(arr));
+        // }
+
+        let del = document.createElement('button');
+        del.innerText= 'delete';
+        del.onclick = () => {
+            let arr = JSON.parse(localStorage.getItem('users'));
+            arr.splice(index, 1);
+            localStorage.setItem('users',JSON.stringify(arr));
+            log()
+        }
+        div2.appendChild(del)
+        userS.appendChild(div)
+    })
+}
+log()
+seve.onclick = () => {
     let user = {
         name: name.value,
         name1: name1.value,
@@ -97,39 +194,9 @@ submit.onclick = (ev) => {
     }
     arr.push(user)
     localStorage.setItem('users', JSON.stringify(arr));
-
-    const users = JSON.parse(localStorage.getItem('users'))
-
-    let div = document.createElement('div')
-    document.body.append(div);
-    let btn = document.createElement('button')
-    let div2 = document.createElement('div')
-    btn.innerHTML = 'Видалити юзера '
-    users.map((value, index) => {
-        value.index = index
-        div.appendChild(div2);
-        div2.innerText = JSON.stringify(value)
-        div2.appendChild(btn)
-        div2.setAttribute('id', index)
-    })
-
-    btn.onclick = () => {
-        div2.innerHTML= '';
-        // localStorage.removeItem('users',) // це видаляє повністю весь масив юзерів
-
-        /* наступним кодом я пробував видалитит конкретного юзера аел не получається і
-        * І незнаю як зробити */
-        // console.log(e);
-        // const index = e.path[1].getAttribute('id')
-        // console.log(users);
-        // const newUser = users.find((value, index1) => index1 !== index);
-        // console.log(newUser);
-    }
+    form.reset()//незнаю що виконує
+    log()
 }
-
-
-let usersData = JSON.parse(localStorage.getItem('users'));
-console.log(usersData);
 
 
 
