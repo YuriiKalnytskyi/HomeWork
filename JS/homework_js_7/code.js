@@ -120,6 +120,7 @@
     Другий параметр визначає кількість ячейок в кожній строці.
     Третій параметр визначає елемент в який потрібно таблицю додати.*/
 
+
 // function table(line, column, tag) {
 //     let table = document.createElement("table");
 //     for (let i = 0; i < line; i++) {
